@@ -78,13 +78,23 @@ public class BirthdayExample {
     System.out.print("Enter a name:");
     String name = input.nextLine();
 
-    // print user input
-    for (String studentName : birthdayMap.keySet()) {
-      if(studentName.equals(name)){
-        System.out.println(birthdayMap.get(studentName));
-      }
+    //Boolean to check wether or not to print missing student statement
+    Boolean isStudent = false;
 
+    // print user input
+    /* For eacn loop going through all the contents of the hashmap.
+     * Checks if the user input is a subset of the name in the hashmap.
+     * Prints the name and birthday if True.
+     */
+    for (String studentName : birthdayMap.keySet()) {
+      if(studentName.contains(name)){
+        System.out.println(studentName + "'s birthday is " + birthdayMap.get(studentName));
+        isStudent = true;
+      }
     }
+    //Prints statement if student not in database
+    if(isStudent == false)
+      System.out.println("Student is not in database");
 
     // close the scanner
     input.close();
