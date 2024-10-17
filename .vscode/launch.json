@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BirthdayExample",
+            "request": "launch",
+            "mainClass": "com.birthday.BirthdayExample",
+            "projectName": "birthday_lookup"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
