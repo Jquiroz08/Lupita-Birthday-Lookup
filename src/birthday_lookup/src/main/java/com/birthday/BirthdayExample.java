@@ -51,8 +51,8 @@ public class BirthdayExample {
       birthdayMap.put(name, birthday);
 
       // print the names and birthdays
-      System.out.println("name = " + name);
-      System.out.println("birthday = " + birthday);
+      //System.out.println("name = " + name);
+      //System.out.println("birthday = " + birthday);
     }
   }
 
@@ -63,7 +63,7 @@ public class BirthdayExample {
      * extra credit module on Files, Directories, and Folders in Canvas.
      */
     String pathToFile =
-      "C:\\Users\\josep\\OneDrive\\Desktop\\Git Repo\\Lupita-Birthday-Lookup\\src\\birthday_lookup\\target\\classes\\com\\birthday\\birthdayOnlyForTesting.json";
+      "C:\\Users\\josep\\OneDrive\\Desktop\\Git Repo\\Lupita-Birthday-Lookup\\src\\birthday_lookup\\target\\classes\\com\\birthday\\birthday.json";
 
     // students should change the code below in order to implment their own solution
 
@@ -79,7 +79,12 @@ public class BirthdayExample {
     String name = input.nextLine();
 
     // print user input
-    System.out.println("name = " + name);
+    for (String studentName : birthdayMap.keySet()) {
+      if(studentName.equals(name)){
+        System.out.println(birthdayMap.get(studentName));
+      }
+
+    }
 
     // close the scanner
     input.close();
